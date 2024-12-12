@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Album</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #6a0dad; /* Purple background */
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5em;
+        }
+
+        .info {
+            margin: 20px auto;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            width: 80%;
+            line-height: 1.8;
+            font-size: 1.2em;
+        }
+
+        .album {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .photo {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border: 5px solid #fff;
+            border-radius: 15px;
+            background-color: #fff;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .photo:hover {
+            transform: scale(1.1);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .photo-description {
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 0.9em;
+        }
+
+        .navigation {
+            margin: 20px 0;
+        }
+
+        .navigation button {
+            background-color: #ff69b4; /* Hot pink */
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .navigation button:hover {
+            background-color: #ff1493; /* Deep pink */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Xush kelibsiz mening gullar albomimning web-sahifasiga </h1>
+        <div class="info">
+            Mirzo Ulug‘bek nomidagi O‘zbekiston milliy universitetining Jizzax filiali  
+Psixologiya fakulteti Filologiya va tillarni o‘qitish (ingliz tili) yo’nalishi 204-24-guruh 
+talabasi Olimxonova Sarvinozning Axborot texnologiyalari fanidan bajargan fan 
+topshirig’i. 
+        </div>
+
+        <div class="album">
+            <div class="photo" onclick="showInfo('Rose', 'Atirgul go‘zallik va muhabbat ramzi hisoblanadi. Uning ko‘plab turlari va ranglari mavjud. Qizil atirgullar sevgi va ishtiyoqni, oq atirgullar esa poklik va sadoqatni anglatadi. Atirgul efir moyi hamda dorivor xususiyatlarga ega.')">
+                <img src="Rose.jpg" alt="Rose">
+                <div class="photo-description">Rose</div>
+            </div>
+            <div class="photo" onclick="showInfo('Tulip', 'Lola bahor faslining ramzi bo‘lib, yangi boshlanish va yangilanishni ifodalaydi. U ko‘proq sovuq iqlimlarda yetishtiriladi. Turkiston lolasi O‘zbekistonda keng tarqalgan bo‘lib, tabiiy muhofaza ostida turadi.')">
+                <img src="Tulip.jpg" alt="Tulip">
+                <div class="photo-description">Tulip</div>
+            </div>
+            <div class="photo" onclick="showInfo('Sunflower', 'Ayçiçek o‘zining yorqin sariq barglari bilan quyoshni eslatadi. Bu gul quyoshga qarab harakatlanish xususiyati bilan mashhur. U moy ishlab chiqarish va oziq-ovqatda keng qo‘llaniladi. Ayçiçek shuningdek quvvat va kuch ramzi hisoblanadi.')">
+                <img src="Sunflower.jpg" alt="Sunflower">
+                <div class="photo-description">Sunflower</div>
+            </div>
+            <div class="photo" onclick="showInfo('Lily', 'Sosna o‘zining nafisligi va xushbo‘yligi bilan ajralib turadi. Odatda, poklik, sadoqat va tinchlik ramzi sifatida qabul qilinadi. Uning dorivor xususiyatlari ham bor, ayniqsa, stressni kamaytirishga yordam beradi.')">
+                <img src="Lily.jpg" alt="Lily">
+                <div class="photo-description">Lily</div>
+            </div>
+            <div class="photo" onclick="showInfo('Daisy', 'Romashka oddiylik va poklik timsoli bo‘lib, sevgi va sodiqlikni anglatadi. Ushbu gulning barglari va o‘zagi dorivor xususiyatga ega bo‘lib, asosan tinchlantiruvchi choy tayyorlashda ishlatiladi.')">
+                <img src="Daisy.jpg" alt="Daisy">
+                <div class="photo-description">Daisy</div>
+            </div>
+            <div class="photo" onclick="showInfo('Orchid', 'Orxideya go‘zallik va nafislik ramzidir. U ekzotik ko‘rinishi va uzoq umr ko‘rishi bilan mashhur. Orxideya o‘zining maxsus ekologik sharoit talab qilishi bilan boshqalardan farq qiladi.')">
+                <img src="Orchid.jpg" alt="Orchid">
+                <div class="photo-description">Orchid</div>
+            </div>
+            <div class="photo" onclick="showInfo('Lavender', 'Lavanda o‘zining xushbo‘yligi va sokinlashtiruvchi xususiyatlari bilan tanilgan. Bu gul stressni kamaytiradi, uyquni yaxshilaydi va ko‘pincha aroma terapiyada ishlatiladi. Lavandaning ko‘k-binafsha barglari juda jozibali.')">
+                <img src="Lavender.jpg" alt="Lavender">
+                <div class="photo-description">Lavender</div>
+            </div>
+            <div class="photo" onclick="showInfo('Peony', 'Pion – farovonlik va sevgi ramzi hisoblanadi. Bu gul asosan katta va yumaloq shaklda ochilib, bayramlarni bezashda keng qo‘llaniladi. Pion ko‘pincha Sharq madaniyatida uzoq umr va baxtning timsoli sifatida qaraladi.')">
+                <img src="Peony.jpg" alt="Peony">
+                <div class="photo-description">Peony</div>
+            </div>
+            <div class="photo" onclick="showInfo('Marigold', 'Tagetes yorqin sariq va to‘q sariq ranglari bilan farqlanadi. Bu gul ijodkorlik va kuch ramzi bo‘lib, xalq tabobatida ham qo‘llaniladi. Tagetes ko‘pincha zararli hasharotlarga qarshi tabiiy vosita sifatida ham yetishtiriladi.')">
+                <img src="Marigold.jpg" alt="Marigold">
+                <div class="photo-description">Marigold</div>
+            </div>
+            <div class="photo" onclick="showInfo('Cherry Blossom', 'Sakura Yaponiya ramzi bo‘lib, qisqa muddatli go‘zallik va yangilanishni ifodalaydi. Bahorda sakura daraxtlari ochilganda ulkan go‘zallikni namoyon qiladi. Bu gul vaqtning qadriga yetishni eslatadi.')">
+                <img src="Cherryblossom.jpg" alt="Cherry Blossom">
+                <div class="photo-description">Cherry Blossom</div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button onclick="prevImage()">Previous</button>
+            <button onclick="nextImage()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        function showInfo(name, description) {
+            alert(name + "\n" + description);
+        }
+
+        function prevImage() {
+            alert("Previous image clicked!");
+        }
+
+        function nextImage() {
+            alert("Next image clicked!");
+        }
+    </script>
+</body>
+</html>
